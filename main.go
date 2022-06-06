@@ -17,7 +17,7 @@ func main() {
 	}
 
 	for _, service := range services {
-		fmt.Println(service.Name)
+		fmt.Printf("%s\n", service.Name)
 	}
 
 }
