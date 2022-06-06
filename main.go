@@ -11,6 +11,13 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(c)
+	services, err := c.ListServices("")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, service := range services {
+		fmt.Println(service.Name)
+	}
 
 }
