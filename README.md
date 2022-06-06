@@ -1,2 +1,5 @@
 # kute
 minikube tui 🌸
+$$
+/pi
+$$
