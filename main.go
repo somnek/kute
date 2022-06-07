@@ -1,23 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"log"
+
+	tea "github.com/charmbracelet/bubbletea"
 )
 
 func main() {
-	c, err := NewClient()
-	if err != nil {
+	p := tea.NewProgram(initialModel())
+	if err := p.Start(); err != nil {
 		log.Fatal(err)
 	}
-
-	services, err := c.ListServices("")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	for _, service := range services {
-		fmt.Printf("%s\n", service.Name)
-	}
-
 }
